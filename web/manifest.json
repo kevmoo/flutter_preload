@@ -2,6 +2,7 @@
     "name": "flutter_preload",
     "short_name": "flutter_preload",
     "start_url": ".",
+    "id": "/flutter_preload/",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
