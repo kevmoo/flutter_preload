@@ -19219,8 +19219,8 @@ if(r===B.fY){this.FF()
 return}s.a=s.b=null
 r=this.c
 r===$&&A.Q4()
-A.Kz(r,"touchstart",A.Vv(new A.wc(s)),!0)
-A.Kz(r,"touchend",A.Vv(new A.Oy(s,this)),!0)},
+A.Kz(r,"pointerdown",A.Vv(new A.wc(s)),!0)
+A.Kz(r,"pointerup",A.Vv(new A.Oy(s,this)),!0)},
 Li(a){var s,r,q=this,p=q.b,o=p.z,n=o!=null&&o.length!==0,m=q.c
 if(n){m===$&&A.Q4()
 o.toString
@@ -19260,19 +19260,24 @@ s=$.R0()
 A.e2(s.p3,s.p4,r.id,B.B9,null)},
 $S:1}
 A.wc.prototype={
-$1(a){var s=A.Og(a),r=this.a
-r.b=s.grZ(s).clientX
-s=A.Og(a)
-r.a=s.grZ(s).clientY},
+$1(a){var s=this.a
+s.b=a.clientX
+s.a=a.clientY},
 $S:1}
 A.Oy.prototype={
-$1(a){var s,r,q=this.a
-if(q.b!=null){s=A.Og(a)
-s=s.grZ(s).clientX
-r=A.Og(a)
-r=r.grZ(r).clientY
-if(s*s+r*r<324){s=$.R0()
-A.e2(s.p3,s.p4,this.b.b.id,B.B9,null)}}q.a=q.b=null},
+$1(a){var s,r,q,p,o=this.a,n=o.b
+if(n!=null){s=a.clientX-n
+n=a.clientY
+r=o.a
+r.toString
+q=n-r
+if(s*s+q*q<324){n=$.R0()
+r=this.b
+p=r.b
+A.e2(n.p3,n.p4,p.id,B.B9,null)
+if((p.a&32)!==0){n=r.c
+n===$&&A.Q4()
+n.focus()}}}o.a=o.b=null},
 $S:1}
 A.e7.prototype={
 $0(){var s=self.document.activeElement,r=this.a.c
